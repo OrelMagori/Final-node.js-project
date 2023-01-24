@@ -1,14 +1,16 @@
 
 
-My app is about Students list
+My app is about Students list with node.js & Mongo DB
 
 ```
-List page
+* Students list page:
 ```
-<img src="Students list3.jpg"/>
+<img src="Students list.jpg"/>
 
-Mongo DB page
+
+```
+* Mongo DB page:
+```
 <img src="Student schema - nomgoDB.jpg"/>
-
 
 Orel Magori
