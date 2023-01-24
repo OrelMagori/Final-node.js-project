@@ -1,0 +1,32 @@
+
+@website = http://localhost:3000
+
+### GET
+
+GET {{website}}/students
+
+### GET
+
+
+### POST
+POST {{website}}/students/add
+Content-Type: application/json
+
+{
+    "name": "orel",
+    "age": 26,
+    "degree": "Software Engineering",
+    "avg" :98
+}
+
+### PUT
+PUT {{website}}/students/update/orel
+Content-Type: application/json
+
+{
+    "newAvg" :100
+}
+
+### DELETE
+
+DELETE {{website}}/students/delete/orel
