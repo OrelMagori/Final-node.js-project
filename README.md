@@ -13,4 +13,4 @@ My app is about Students list with node.js & Mongo DB
 ```
 <img src="Student schema - nomgoDB.jpg"/>
 
-Orel Magori
+<b>Orel Magori</b>
