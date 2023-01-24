@@ -1,20 +1,13 @@
 
 
-<h3><b><u>My app is about Students list with node.js & Mongo DB</u></b></h3>
+<h1><b>My app is about Students list with node.js & Mongo DB</b></h1>
 
-<!-- ```
-* Students list page:
-``` -->
-<h5><b><u>Students list page</u></b></h5>
+<h3><b>Students list page:</b></h3>
 <br/>
 <img src="Students list.jpg"/>
 
-
-<!-- ```
-* Mongo DB page:
-``` -->
-<h5><b><u>Mongo DB page</u></b></h5>
+<h3><b>Mongo DB page:</b></h3>
 <br/>
 <img src="Student schema - nomgoDB.jpg"/>
 
-<h3><b><u>Orel Magori</u></b></h3>
+<h1><b>Orel Magori</b></h1>
