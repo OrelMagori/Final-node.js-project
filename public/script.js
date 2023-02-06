@@ -1,14 +1,11 @@
 function get() {
-  // XMLHttpRequest -
   let req = new XMLHttpRequest();
 
   // XMLHttpRequest.open(method: string, url: string)
   req.open("GET", "http://localhost:3000/students");
 
   req.onreadystatechange = () => {
-    // readyState of 4 - DONE (operation is complete).
     if (req.readyState === 4) {
-      // req.response - is the data that returns from the address
       // JSON.parse() - convert to array.
       let arr = JSON.parse(req.response);
 
@@ -21,7 +18,6 @@ function get() {
                  <th>Delete</th>`;
 
       for (const student of arr) {
-        // tr -> table row, td -> table data(cell)
         result += `
                 <tr>
                 <td>${student.name}</td>
@@ -54,10 +50,8 @@ function post() {
     if (req.readyState === 4) get();
   };
 
-  // define header of request
   req.setRequestHeader("Content-type", "application/json");
-  // send the values from user with request:
-  // in req.send() - we can add the body
+
   req.send(
     JSON.stringify({
       name: studentName,
@@ -69,31 +63,26 @@ function post() {
 }
 
 function put(StudentName) {
-  let input = prompt("Enter a new Average"); // input from user:
+  let input = prompt("Enter a new Average");
 
   let req = new XMLHttpRequest(); // מאפשר לגשת לכתובת באינטרנט ולקבל את הנתונים שבתוכה
   req.open("PUT", `http://localhost:3000/students/update/${StudentName}`);
 
-  // after update - refresh the table:
   req.onreadystatechange = () => {
     if (req.readyState === 4) get();
   };
 
-  // define header of request
   req.setRequestHeader("Content-type", "application/json");
-  // send the values from user with request:
-  // in req.send() - we can add the body
+
   req.send(JSON.stringify({ newAvg: input }));
 }
 
 function deleteStudent(studentName) {
-  //let param = Number(param);
   let req = new XMLHttpRequest();
   req.open("DELETE", `http://localhost:3000/students/delete/${studentName}`);
-  // show the updated table after request is sent.
+
   req.onreadystatechange = () => {
     if (req.readyState === 4) get();
   };
   req.send();
 }
-
